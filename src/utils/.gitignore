@@ -1,0 +1,53 @@
+# Python Cache Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# VSCode Specific
+.vscode/
+
+# Anaconda Environment Files
+*.conda
+*.log
+env/
+venv/
+.venv/
+
+# Temporary Files
+*.tmp
+*.temp
+
+# System Files (Windows/Mac)
+Thumbs.db
+.DS_Store
+
+# Large Data Files (if not needed)
+*.zip
+*.gz
+*.tar
+*.7z
+
+# Model Files (if not needed)
+*.joblib
+*.pkl
+
+# Ignore Dataset Files (if not needed)
+*.csv
+*.xlsx
+*.parquet
+*.h5
+
+# Logs and Experiment Tracking
+logs/
+*.log
+wandb/
+mlruns/
+
+# Ignore Python Virtual Environments
+venv/
+env/
+.venv/
