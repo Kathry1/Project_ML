@@ -51,3 +51,15 @@ mlruns/
 venv/
 env/
 .venv/
+
+# Allow saved models in results_notebook
+!results_notebook/*.pkl
+
+# Allow required data files in results_notebook/data
+!results_notebook/data/train2.csv
+!results_notebook/data/test2.csv
+!results_notebook/data/train_filtered2.csv
+!results_notebook/data/test_filtered2.csv
+!results_notebook/data/subject-info_cleaned_2_final.csv
+
+
