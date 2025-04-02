@@ -1,7 +1,8 @@
-# Project_ML
+# ML_Prediction_of_Cause_of_Death_in_CHF
+
 
 ## Overview
-Project_ML is a machine learning project designed to analyze and model data using various machine learning techniques. The project includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and evaluation.
+ML_Prediction_of_Cause_of_Death_in_CHF is a machine learning project designed to analyze and model data using various machine learning techniques. The project includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and evaluation.
 
 ## Repository Structure
 ```
@@ -35,6 +36,41 @@ The training scripts and notebooks in the `notebooks_results/` directory allow y
 
 ### Evaluating Results
 Evaluation results, including performance metrics and feature importance analysis, can be found in the `results_notebook/` directory.
+
+###  Model Results Summary (after data balancing)
+
+####  Random Forest
+- Accuracy: **0.84**
+- Macro F1-score: **0.59**
+- Class-wise Performance:
+  - Class 0 (Alive): Precision **0.97**, Recall **0.96**, F1 **0.96**
+  - Class 1 (SCD): Precision **0.50**, Recall **0.17**, F1 **0.25**
+  - Class 2 (Non-CVD): Precision **0.45**, Recall **0.68**, F1 **0.54**
+  - Class 3 (Other CVD): Precision **0.62**, Recall **0.59**, F1 **0.60**
+
+####  Voting Classifier (Ensemble)
+- Accuracy: **0.85**
+- Macro F1-score: **0.63**
+- Class-wise Performance:
+  - Class 0 (Alive): Precision **0.95**, Recall **0.98**, F1 **0.96**
+  - Class 1 (SCD): Precision **0.67**, Recall **0.33**, F1 **0.44**
+  - Class 2 (Non-CVD): Precision **0.52**, Recall **0.58**, F1 **0.55**
+  - Class 3 (Other CVD): Precision **0.57**, Recall **0.55**, F1 **0.56**
+
+---
+
+###  Interpretation
+-  Both models improved compared to the imbalanced version, especially in minority class recall and F1-score.
+-  **Class 1 (SCD)** performance remains challenging, but **recall increased from 0.07 → 0.33**.
+-  Voting ensemble outperforms Random Forest slightly on macro-averaged metrics and class balance.
+
+---
+
+###  Conclusion
+Balancing the dataset significantly improved model fairness across classes. The **Voting Classifier** is currently the best performing model in terms of **balanced accuracy and F1-score**, making it suitable for multiclass prediction in a medical context.
+
+
+
 
 ## Machine Learning Models Used
 - **Logistic Regression** - Baseline model
